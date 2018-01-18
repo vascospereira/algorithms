@@ -1,4 +1,4 @@
-var doLinearSearch = function(array) {
+var doLinearSearch = function(array, targetValue) {
   for (var guess = 0; guess < array.length; guess++) {
     if (array[guess] === targetValue) { 
         return guess;
