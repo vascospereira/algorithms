@@ -4,17 +4,15 @@ var swap = function(array, firstIndex, secondIndex) {
     array[secondIndex] = temp;
 };
 
-var indexOfMinimum = function(array, startIndex) {
-    var minValue = array[startIndex];
-    var minIndex = startIndex;
-
-    for(var i = minIndex + 1; i < array.length; i++) {
+var indexOfMinimum = function(array, indexMinValue) {
+    var minValue = array[indexMinValue];
+    for(var i = indexMinValue + 1; i < array.length; i++) {
         if(array[i] < minValue) {
-            minIndex = i;
+            indexMinValue = i;
             minValue = array[i];
         }
     } 
-    return minIndex;
+    return indexMinValue;
 }; 
 
 var selectionSort = function(array) {
@@ -27,5 +25,5 @@ var selectionSort = function(array) {
 
 var array = [22, 11, 99, 88, 9, 7, 42];
 selectionSort(array);
-var array = [-22, -11, -99, -88, -9, -7, -42];
+var array = [-22, -11, -99, 88, 9, -7, 42];
 selectionSort(array);
