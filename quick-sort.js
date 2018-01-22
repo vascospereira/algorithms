@@ -12,7 +12,7 @@ var partition = function(array, p, r) {
             i++;
         }
     }
-    swap(array, j, i);
+    swap(array, i, r);
     return i;
 };
 
